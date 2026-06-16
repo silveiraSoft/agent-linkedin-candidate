@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?><w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mo="http://schemas.microsoft.com/office/mac/office/2008/main" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 wp14">
+  <w:body>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="160" w:after="0"/>
+        <w:pBdr>
+          <w:bottom w:val="single" w:sz="8" w:space="2" w:color="1F3A6E"/>
+        </w:pBdr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="22"/>
+        </w:rPr>      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="160" w:after="0"/>
+        <w:pBdr>
+          <w:bottom w:val="single" w:sz="8" w:space="2" w:color="1F3A6E"/>
+        </w:pBdr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="22"/>
+        </w:rPr>
+        <w:t>PERSONAL PROJECTS (OPEN SOURCE)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="100" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>AI Systems Engineer  &#x2014;  2025 &#x2013; Present</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="1"/>
+        </w:numPr>
+        <w:spacing w:before="30" w:after="30"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:sz w:val="19"/>
+        </w:rPr>
+        <w:t>Engineered autonomous LinkedIn job-application agent (Python, Anthropic Claude API / Claude Agent SDK) with 4-phase orchestration: MCP-based multi-source job search, ATS-optimized resume generation via Claude Haiku, LinkedIn Easy Apply automation via Claude in Chrome, and retry logic with persistent error tracking &#x2014; autonomously submitting tailored applications weekly to 50+ positions.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="1"/>
+        </w:numPr>
+        <w:spacing w:before="30" w:after="30"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:sz w:val="19"/>
+        </w:rPr>
+        <w:t>Built AWS infrastructure monitoring system powered by Amazon Bedrock: intelligent resource-health analysis, anomaly detection, automated CloudWatch metric aggregation, and natural-language incident summaries &#x2014; reducing mean time to detect (MTTD) for infrastructure issues.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="160" w:after="0"/>
+        <w:pBdr>
+          <w:bottom w:val="single" w:sz="8" w:space="2" w:color="1F3A6E"/>
+        </w:pBdr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="22"/>
+        </w:rPr>
+        <w:t>EARLIER EXPERIENCE</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="60" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>University Professor (Part-Time)  |  2010–2016</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:color w:val="555555"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> — Universidade Metodista de Angola, Universidade Católica de Angola, Universidade Lusíada (Angola)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="0" w:after="80"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>Taught Data Structures &amp; Algorithms, C++, Database I/II, Systems Architecture to 500+ students per year across 5+ years.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>Specialist B, Computer Science  |  Sep 2006–2010</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:color w:val="555555"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> — ETECSA, Cuba</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="0" w:after="0"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>Full-stack development (PHP, JavaScript, MySQL, PostgreSQL); built internal CMS and academic training systems (SAGEC) used organization-wide.</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="160" w:after="40"/>
+        <w:pBdr>
+          <w:bottom w:val="single" w:sz="6" w:space="1" w:color="1F3A6E"/>
+        </w:pBdr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="22"/>
+        </w:rPr>
+        <w:t>EDUCATION</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="60" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t xml:space="preserve">Master in Business Informatics  —  </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:color w:val="555555"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>CUJAE (Technological University José Antonio Echeverría), Havana, Cuba — 2013</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="60" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t xml:space="preserve">B.Sc. in Computer Sciences  —  </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:color w:val="555555"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>University of Santiago de Cuba — 2006</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="160" w:after="40"/>
+        <w:pBdr>
+          <w:bottom w:val="single" w:sz="6" w:space="1" w:color="1F3A6E"/>
+        </w:pBdr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="22"/>
+        </w:rPr>
+        <w:t>CERTIFICATIONS</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>• AWS Partner Business Accreditation  (Amazon Web Services)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>• AWS Partner Technical Accreditation  (Amazon Web Services)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>• AWS Certified AI Practitioner — in progress</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>• AWS Certified Developer – Associate — in progress</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="160" w:after="40"/>
+        <w:pBdr>
+          <w:bottom w:val="single" w:sz="6" w:space="1" w:color="1F3A6E"/>
+        </w:pBdr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="22"/>
+        </w:rPr>
+        <w:t>ADDITIONAL INFORMATION</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:i w:val="0"/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t xml:space="preserve">Work Authorization: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>Authorized to work in the USA — no sponsorship required</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:i w:val="0"/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t xml:space="preserve">Languages: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>English (fluent)  ·  Spanish (native)  ·  Portuguese (fluent)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:i w:val="0"/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t xml:space="preserve">Location: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>Remote preferred; open to on-site within 28 miles of Hialeah FL 33015 (Miami-Dade + South Broward up to Sunrise)</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:i w:val="0"/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t xml:space="preserve">Notice Period: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>1 month  |  Travel Availability: 50%</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:i w:val="0"/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t xml:space="preserve">AI Tools: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>Amazon Q, GitHub Copilot, Claude Code — active daily use to accelerate delivery</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:spacing w:before="40" w:after="20"/>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b/>
+          <w:i w:val="0"/>
+          <w:color w:val="1F3A6E"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t xml:space="preserve">Teaching: </w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/>
+          <w:b w:val="0"/>
+          <w:i w:val="0"/>
+          <w:sz w:val="21"/>
+        </w:rPr>
+        <w:t>5+ years as university professor (2010–2016), Angola — Data Structures, Algorithms, Database Architecture</w:t>
+      </w:r>
+    </w:p>
+    <w:sectPr w:rsidR="00FC693F" w:rsidRPr="0006063C" w:rsidSect="00034616">
+      <w:pgSz w:w="12240" w:h="15840"/>
+      <w:pgMar w:top="1008" w:right="1152" w:bottom="1008" w:left="1152" w:header="720" w:footer="720" w:gutter="0"/>
+      <w:cols w:space="720"/>
+      <w:docGrid w:linePitch="360"/>
+    </w:sectPr>
+  </w:body>
+</w:document>

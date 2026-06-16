@@ -53,5 +53,17 @@
       "Indeed": 1
     },
     "week_str": "June 15, 2026"
+  },
+  {
+    "run_id": "23e3228a-c7c",
+    "mode": "MANUAL",
+    "timestamp": "2026-06-16T01:03:53.400343",
+    "duration_seconds": 0.03,
+    "jobs_found": 0,
+    "resumes_generated": 0,
+    "skipped": 18,
+    "errors": 0,
+    "sources": {},
+    "week_str": "June 16, 2026"
   }
 ]

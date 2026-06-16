@@ -240,11 +240,14 @@ LOCATION_CONFIG = {
         "sweetwater", "medley", "virginia gardens", "miami springs",
         "west miami", "south miami", "cutler bay", "aventura",
         # South Broward (within 28mi)
+        "fort lauderdale", "ft. lauderdale", "ft lauderdale",
+        "broward", "broward county",
         "pembroke pines", "miramar", "hollywood, fl", "hallandale",
         "sunrise, fl", "sunrise fl", "city of sunrise",
         "plantation, fl", "plantation fl",
         "davie, fl", "davie fl",
-        "cooper city",
+        "cooper city", "deerfield beach", "pompano beach",
+        "lauderhill", "north lauderdale", "tamarac",
     ],
 }
 
@@ -265,10 +268,12 @@ CANDIDATE["remote_preference"] = (
 
 LEADERSHIP_TITLE_KEYWORDS = [
     "team lead", "tech lead", "engineering lead", "lead engineer",
+    "lead developer", "lead architect", "lead analyst", "lead consultant",
     "engineering manager", "software manager", "development manager",
     "director", "vp ", "vice president", "head of engineering",
     "head of software", "people manager", "staff manager",
     "delivery manager", "project manager", "program manager",
+    "microservices lead", "services lead", "java lead", " lead",
 ]
 
 # ── Skill Groups ───────────────────────────────────────────────────────────────
@@ -1289,6 +1294,7 @@ def run_agent(jobs_found, mode="MANUAL", run_id=None, dry_run=False):
                     "salary_submitted":     salary,
                     "salary_offered":       salary_off,
                     "status":               "dry_run",
+                    "easy_apply":           job.get("easy_apply", False),
                     "run_id":               run_id,
                     "applied_date":         datetime.date.today().isoformat(),
                 }
@@ -1330,6 +1336,7 @@ def run_agent(jobs_found, mode="MANUAL", run_id=None, dry_run=False):
                 "salary_submitted":     salary,
                 "salary_offered":       salary_off,
                 "status":               _status,
+                "easy_apply":           job.get("easy_apply", False),
                 "retry_count":          _prior_retry_count + _attempt,
                 "run_id":               run_id,
                 "applied_date":         datetime.date.today().isoformat(),
@@ -1393,6 +1400,7 @@ def run_agent(jobs_found, mode="MANUAL", run_id=None, dry_run=False):
                 "salary_submitted":     None,
                 "salary_offered":       job.get("salary"),
                 "status":               "error",
+                "easy_apply":           job.get("easy_apply", False),
                 "error_message":        error_msg,
                 "error_type":           error_type,
                 "retry_count":          total_retries,

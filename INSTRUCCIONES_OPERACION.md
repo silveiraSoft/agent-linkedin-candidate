@@ -20,28 +20,48 @@
 
 ---
 
-## ⏰ Ejecución automática — miércoles 10:03 AM
+## ⏰ Ejecución automática — miércoles 8:00 PM
 
 - **Scheduled Task ID:** `weekly-job-agent-adalberto`
-- **Cron:** `0 10 * * 3`
-- **Próxima ejecución:** miércoles 2026-06-18 a las 10:03 AM
+- **Cron:** `0 20 * * 3`
+- **Próxima ejecución:** miércoles 2026-06-18 a las 8:00 PM
 - **Estado:** HABILITADO ✅
 
-> 💡 **¿Por qué miércoles 10am?** Martes-miércoles son el pico de publicación de
-> nuevas ofertas. Las empresas planifican en reuniones del lunes y publican Tue/Wed.
-> Aplicando el miércoles a las 10am eres de los primeros candidatos en las ofertas
-> más frescas de la semana.
+### ▶️⏸️ Activar o pausar la ejecución automática
 
-### Lo que debes tener abierto (sin hacer nada más):
+Puedes controlar el schedule con frases simples en Cowork:
 
-| Requisito | Por qué |
+| Acción | Frase |
 |---|---|
-| **Cowork app** corriendo en background | El scheduler necesita Cowork activo para dispararse |
-| **Google Chrome** con **Claude in Chrome extension** conectada | Necesario para LinkedIn Easy Apply automático |
-| **Sesión de LinkedIn** activa en Chrome | El agente navega la página directamente |
+| **Activar** | "activa el agente programado" |
+| **Activar** | "activa la ejecución automática" |
+| **Activar** | "habilita el agente" |
+| **Pausar** | "pausa el agente" |
+| **Pausar** | "desactiva el agente programado" |
+| **Pausar** | "suspende el agente" |
+
+Claude actualizará el scheduled task y te confirmará el nuevo estado.
+> ⚠️ Estas frases **solo controlan el schedule automático** — no inician ni detienen una ejecución activa.
+
+> 💡 **¿Por qué miércoles 8pm?** El proceso consume muchos tokens y tiempo de procesamiento.
+> Las 8pm minimiza interrupciones al usuario y el trabajo publicado durante el día ya está disponible.
+
+### Lo que debes tener activo ANTES de la ejecución (automática o manual):
+
+| Requisito | Cómo verificar |
+|---|---|
+| **Cowork app** corriendo en background | Ícono en la bandeja del sistema (system tray) |
+| **Google Chrome** abierto con **Claude in Chrome** en verde | Ícono de extensión verde en Chrome |
+| **LinkedIn** — sesión activa en Chrome | Abre linkedin.com → debe mostrar el feed, no login |
+| **Dice** — sesión activa en Chrome | Abre dice.com → debe mostrar tu perfil, no login |
+| **ZipRecruiter** — sesión activa en Chrome | Abre ziprecruiter.com → debe mostrar tu perfil, no login |
+| **Indeed** — sesión activa en Chrome | Abre indeed.com → debe mostrar tu perfil, no login |
+
+> ⚠️ **No necesitas tener las pestañas abiertas activamente** — solo que la sesión esté guardada
+> (cookies activas). Verifica abriendo cada sitio una vez antes de la ejecución.
 
 ### Lo que NO necesitas:
-- No necesitas estar frente a la computadora
+- No necesitas estar frente a la computadora durante la ejecución automática
 - No necesitas aprobar ninguna acción individual
 - No necesitas abrir ninguna app durante la ejecución
 
@@ -95,10 +115,31 @@ Gmail MCP crea borrador con **dos secciones**:
 ## ▶️ Ejecución manual
 
 ### Opción A — Cowork (recomendado, flujo completo)
+
+Abre una nueva conversación en Cowork y escribe simplemente:
+
 ```
-"Ejecuta el agente de empleos ahora"
+ejecuta el agente
 ```
-Claude ejecuta las 4 fases completas incluyendo Easy Apply.
+
+El sistema reconoce esta frase y automáticamente ejecuta el comando completo:
+
+```
+Ejecuta el job agent completo siguiendo las instrucciones en `C:\Dev\agent-linkedin-candidate\AGENT_TASK_PROMPT.md`
+```
+
+Claude leerá `AGENT_TASK_PROMPT.md` y ejecutará las 4 fases completas (pre-vuelo, búsqueda, Easy Apply, email).
+
+**Otras frases que también funcionan:**
+- "ejecuta el agente manualmente"
+- "corre el agente"
+- "inicia el agente"
+- "ejecuta el job agent"
+- "lanza el agente"
+
+> **Para desarrolladores:** el prompt exacto que se ejecuta internamente es:
+> `Ejecuta el job agent completo siguiendo las instrucciones en C:\Dev\agent-linkedin-candidate\AGENT_TASK_PROMPT.md`
+> La lógica completa está en `AGENT_TASK_PROMPT.md` — ese archivo es la única fuente de verdad del comportamiento del agente.
 
 ### Opción B — Terminal (solo Python, sin Easy Apply)
 ```bash
