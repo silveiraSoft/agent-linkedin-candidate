@@ -1,0 +1,25 @@
+﻿# Generated resumes (personal data)
+resume-personalized/*.docx
+
+# Dynamic inputs (generated per-run)
+jobs_input.json
+
+# Logs (except run_history.json which we keep)
+logs/*.log
+logs/*.log.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.env
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# OS
+Thumbs.db
+desktop.ini
