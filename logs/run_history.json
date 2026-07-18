@@ -65,5 +65,33 @@
     "errors": 0,
     "sources": {},
     "week_str": "June 16, 2026"
+  },
+  {
+    "run_id": "3fdf6568-d1d",
+    "mode": "MANUAL",
+    "timestamp": "2026-07-18T17:13:47.482258",
+    "duration_seconds": 20.94,
+    "jobs_found": 3,
+    "resumes_generated": 2,
+    "skipped": 23,
+    "errors": 0,
+    "sources": {
+      "Dice": 3
+    },
+    "week_str": "July 18, 2026"
+  },
+  {
+    "run_id": "63ac6dac-acf",
+    "mode": "MANUAL",
+    "timestamp": "2026-07-18T18:16:06.109520",
+    "duration_seconds": 10.78,
+    "jobs_found": 1,
+    "resumes_generated": 1,
+    "skipped": 0,
+    "errors": 0,
+    "sources": {
+      "linkedin": 1
+    },
+    "week_str": "July 18, 2026"
   }
 ]

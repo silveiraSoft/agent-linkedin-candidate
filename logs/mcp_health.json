@@ -1,25 +1,6 @@
 {
-  "run_at": "2026-06-16T01:03:36.170417+00:00",
-  "mcps": {
-    "dice": {
-      "name": "Dice.com (mcp__1d6f6569)",
-      "status": "ok",
-      "results_count": 126,
-      "probe_keyword": "Java Spring Boot backend engineer"
-    },
-    "ziprecruiter": {
-      "name": "ZipRecruiter (mcp__dd608528)",
-      "status": "ok",
-      "results_count": 5,
-      "probe_keyword": "senior Java software engineer"
-    },
-    "indeed": {
-      "name": "Indeed (mcp__417fd6dd)",
-      "status": "error",
-      "results_count": 0,
-      "error": "No job results found. API requires 'location' parameter. Excluded from this run.",
-      "probe_keyword": "Senior Java backend microservices AWS"
-    }
-  },
-  "summary": "2/3 MCPs healthy. Indeed excluded (API parameter mismatch). Proceeding with Dice + ZipRecruiter."
+  "timestamp": "2026-07-18T10:00:00Z",
+  "indeed":     {"status": "ok", "result_count": 10},
+  "dice":       {"status": "ok", "result_count": 165},
+  "zipr":       {"status": "ok", "result_count": 1196}
 }
