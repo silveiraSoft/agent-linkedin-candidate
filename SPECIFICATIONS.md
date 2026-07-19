@@ -1,5 +1,5 @@
 # Job Agent — Especificaciones Maestras
-## Documento de referencia completo · v1.0 · 2026-06-16
+## Documento de referencia completo · v1.1 · 2026-07-18
 
 > **Propósito**: Este documento es la fuente de verdad única del sistema.
 > Un desarrollador o agente Claude que lea solo este archivo debe poder
@@ -129,12 +129,14 @@ C:\Dev\agent-linkedin-candidate\
 ├── agent_logger.py             # Sistema de logs (3 streams por ejecución)
 ├── ats_updater.py              # Auto-actualiza técnicas ATS mensualmente
 ├── regenerate_resumes.py       # Utilidad: regenera resumes con nuevo formato
+├── generate_dashboard.py       # ⭐ NEW — genera dashboard HTML desde applications_log.json
 ├── AGENT_TASK_PROMPT.md        # Prompt maestro del agente (fuente de verdad del workflow)
 ├── SPECIFICATIONS.md           # Este archivo — especificaciones completas
 ├── INSTRUCCIONES_OPERACION.md  # Guía operacional para el usuario
 ├── setup_github.ps1            # Script GitHub (requiere PAT con scope repo)
 ├── applications_log.json       # Log maestro de todas las aplicaciones (dedup key)
-├── jobs_input.json             # Jobs encontrados por MCPs → input para el agente
+├── jobs_input.json             # Jobs combinados (LinkedIn + MCPs) → input para el agente
+├── jobs_input_linkedin.json    # ⭐ NEW — Jobs de LinkedIn (Phase 1A), separados para dedup
 ├── ats_techniques_cache.json   # Cache ATS — se renueva automáticamente 2026-07-15
 ├── SilveiraNapoles-Adalberto-Resume-2026-ATS.docx  # Resume ATS base (~90-92 score)
 ├── resume-personalized/        # Resumes personalizados por trabajo
@@ -143,6 +145,7 @@ C:\Dev\agent-linkedin-candidate\
 └── logs/
     ├── run_history.json            # Historial de runs (últimos 52)
     ├── mcp_health.json             # Último health check de MCPs
+    ├── dashboard_data.html         # ⭐ NEW — dashboard HTML generado por generate_dashboard.py
     ├── errors.log                  # Errores (rotating 5MB x 5)
     ├── applications_{mode}_{ts}.log
     ├── execution_{mode}.log        # Ejecución (rotating 10MB x 10)
@@ -164,13 +167,20 @@ C:\Dev\agent-linkedin-candidate\
 
 ```
 Scheduled Task (miércoles 8PM)
-    → Claude lee AGENT_TASK_PROMPT.md
-    → Phase 0: Pre-flight checks
-    → Phase 1: MCP searches → jobs_input.json
+    → Claude lee SKILL.md (fuente de verdad para el schedule — debe estar sincronizado con AGENT_TASK_PROMPT.md)
+    → Phase 0: Pre-flight checks + DEDUP CHECK (lee applications_log.json del día de hoy)
+    → Phase 1A: Chrome → LinkedIn search → jobs_input_linkedin.json
+    → Phase 1B: MCPs (Dice/Indeed/ZipRecruiter) → resultados parciales
+    → Phase 1C: Combinar 1A+1B → jobs_input.json (deduplicado)
     → Phase 2: python linkedin_agent.py → resume-personalized/ + applications_log.json
     → Phase 3: Chrome automation → Easy Apply por job → applications_log.json updated
     → Phase 4: Gmail MCP → Draft report email con resultados
+    → Phase 5: python generate_dashboard.py → logs/dashboard_data.html → mcp__cowork__update_artifact
 ```
+
+> ⚠️ CRÍTICO: La fuente de verdad para el scheduled task es SKILL.md (leída por Cowork).
+> AGENT_TASK_PROMPT.md es la versión de referencia. Si divergen, SKILL.md gana en ejecución
+> automática. Siempre mantenerlos sincronizados al agregar nuevas fases o reglas.
 
 ### 3.4 applications_log.json — Schema
 
@@ -242,9 +252,19 @@ Scheduled Task (miércoles 8PM)
 
 ---
 
-## 6. Workflow del Agente (4 Fases)
+## 6. Workflow del Agente (5 Fases)
 
 ### Fase 0 — Pre-Flight
+
+#### 0E. DEDUP CHECK — Leer aplicaciones del día antes de iniciar
+
+Antes de cualquier búsqueda, leer `applications_log.json` y extraer todos los `job_id`
+con `applied_date == today`. Estos IDs se excluyen en Phase 1 y Phase 3.
+
+**Propósito**: Evitar aplicaciones duplicadas cuando el agente se ejecuta manualmente
+el mismo día que ya hubo un run automático (o viceversa).
+
+---
 
 #### 0A. Validaciones de entorno
 
@@ -625,6 +645,34 @@ Cuerpo (plain text): Applied N · Manual N · Errors N · Full report in drafts
 
 ---
 
+### Fase 5 — Actualización del Dashboard ⚠️ OBLIGATORIA — NO OMITIR
+
+Ejecutar SIEMPRE al final de cada run (manual o automático):
+
+```bash
+cd C:\Dev\agent-linkedin-candidate
+python generate_dashboard.py
+```
+
+Luego:
+1. Leer `C:\Dev\agent-linkedin-candidate\logs\dashboard_data.html`
+2. Llamar `mcp__cowork__update_artifact` con:
+   - `id`: `job-agent-dashboard`
+   - `html_path`: ruta al dashboard_data.html
+
+**generate_dashboard.py — comportamiento**:
+- Lee `applications_log.json` completo
+- Genera HTML self-contained con Grid.js v5 (CDN: `gridjs@5.0.2`)
+- Embeds todos los datos como `const APPS_DATA = [...]`
+- Filtros: texto libre (company/title/location), Status, Source, Date, Easy Apply
+- Tabla sortable, paginada (25/pág), columnas: #, Fecha, Compañía, Título, Ubicación, Fuente, Estado, Salario, Match%, Pri., EA, Link
+- Stats cards: Total / Applied (verde) / Resume Ready (amber) / Last Run / Visible
+- Output: `logs/dashboard_data.html`
+
+**Omitir Phase 5 = dashboard desactualizado**. El usuario no verá las aplicaciones del run actual.
+
+---
+
 ## 7. Reglas de Filtrado
 
 ### 7.1 Filtro de Ubicación
@@ -764,7 +812,7 @@ Usar `mcp__scheduled-tasks__update_scheduled_task` con taskId `weekly-job-agent-
 - "ejecuta el proceso"
 
 **Acción**: Leer `AGENT_TASK_PROMPT.md` y ejecutar workflow completo
-(Phase 0 → Phase 1 → Phase 2 → Phase 3 → Phase 4) sin pedir confirmación.
+(Phase 0 → Phase 1A → Phase 1B → Phase 1C → Phase 2 → Phase 3 → Phase 4 → Phase 5) sin pedir confirmación.
 
 Prompt interno completo:
 ```
